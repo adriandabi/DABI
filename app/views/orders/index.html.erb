@@ -1,0 +1,12 @@
+<div class="row">
+  <% @orders.each do |order| %>
+    <div class="col-sm">
+      <h1>
+        Order # <%= order.id %>:
+        <%= link_to order.product.name, order %>
+      </h1>
+      <p><%= link_to image_tag(order.product.image, class:"img-fluid"), order %></p>
+      <strong>$ <%= order.product.price %></strong>
+    </div><!-- /col -->
+  <% end %>
+</div>
