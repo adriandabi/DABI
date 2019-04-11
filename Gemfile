@@ -61,4 +61,6 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem 'sendgrid-ruby'
 
-gem 'devise'
+gem 'devise', '>= 4.6.0'
+
+gem 'cancancan', '~> 1.10'
