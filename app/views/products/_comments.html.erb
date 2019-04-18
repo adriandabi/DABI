@@ -1,13 +1,12 @@
 <div class="product-reviews">
   <% @comments.each do |comment| %>
-    <div class="row">
       <div>
         <%= comment.user.first_name %>, <%= "#{time_ago_in_words(comment.created_at)} ago" %>
       </div>
-    </div>
     <p class="stars rated" data-score="<%= comment.rating %>"></p>
     <p>
       <%= comment.body %>
     </p>
     <% end %>
+   <%= will_paginate @comments %>
 </div>

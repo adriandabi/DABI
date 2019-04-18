@@ -64,3 +64,5 @@ gem 'sendgrid-ruby'
 gem 'devise', '>= 4.6.0'
 
 gem 'cancancan', '~> 1.10'
+
+gem 'will_paginate', '~> 3.1.7'
