@@ -2,6 +2,11 @@
   <tr class='col-md-3 col-sm-6'>
     <td style="display:block"><strong><%= product.name %></strong></td>
     <td style="display:block"><%= link_to image_tag(product.image, class: "img-fluid"), product %></td>
+    <td>
+    <% if product.comments != [] %>
+      <p class="stars rated" data-score="<%= product.average_rating %>"></p>
+    <% end %>
+    </td>
     <td style="display:block"><%= product.description %></td>
     <td style="display:block"><strong><%= number_to_currency(product.price) %></strong></td>
     <td><%= link_to 'Show', product %></td>
